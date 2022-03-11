@@ -163,7 +163,7 @@ public class Main extends JFrame implements MouseMotionListener{
            isstarted = false;
            AudioInputStream audioIn = null;
            try {
-               File file = new File("src/com/OOP/game/Passed.wav");
+               File file = new File("Java-assignment/src/com/OOP/game/Passed.wav");
                AudioInputStream stream = AudioSystem.getAudioInputStream(file);
                Clip clip = AudioSystem.getClip();
                clip.open(stream);
@@ -204,7 +204,7 @@ public class Main extends JFrame implements MouseMotionListener{
     void gameover(){
         AudioInputStream audioIn = null;
         try {
-            File file = new File("src/com/OOP/game/wasted.wav");
+            File file = new File("Java-assignment/src/com/OOP/game/wasted.wav");
             AudioInputStream stream = AudioSystem.getAudioInputStream(file);
             Clip clip = AudioSystem.getClip();
             clip.open(stream);
