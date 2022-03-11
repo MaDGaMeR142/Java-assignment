@@ -38,6 +38,8 @@ class PaintPanel extends JPanel {
             x1=Main.x;
             y1=Main.y;
         }
+
+
         g.drawRect(0,100,120,10);
         g.drawRect(110,100,10,100);
         g.drawRect(0,140,90,10);
@@ -56,6 +58,7 @@ class PaintPanel extends JPanel {
         g.drawRect(220,360,330,10);
 
         g.setColor(Color.blue);
+        g.drawString("Drag the red ball through the path",200,50);
         g.fillRect(0,100,120,10);
         g.fillRect(110,100,10,100);
         g.fillRect(0,140,90,10);
@@ -93,7 +96,7 @@ public class Main extends JFrame implements MouseMotionListener{
     Area a1 = new Area();
     Point p1 = new Point();
     boolean isstarted = false;
-    JLabel l1;
+
 
 
 
@@ -117,12 +120,13 @@ public class Main extends JFrame implements MouseMotionListener{
         r16 = new Rectangle(220,360,330,10);
 
         JFrame jfrm = new JFrame("Paint Demo");
-        jfrm.setSize(800, 800);
+        jfrm.setSize(600, 500);
         // Terminate the program when the user closes the application.
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        l1= new JLabel("Drag the red ball through the path");
-        l1.setBounds(200,80,200,50);
-        jfrm.add(l1);
+       // JLabel l1= new JLabel("Drag the red ball through the path");
+
+        // l1.setBounds(200,80,200,50);
+        //jfrm.add(l1);
         jfrm.add(pp);
         jfrm.addMouseMotionListener(this);
         // Display the frame.
