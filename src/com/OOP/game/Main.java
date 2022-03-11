@@ -93,7 +93,7 @@ public class Main extends JFrame implements MouseMotionListener{
     Area a1 = new Area();
     Point p1 = new Point();
     boolean isstarted = false;
-
+    JLabel l1;
 
 
 
@@ -120,8 +120,9 @@ public class Main extends JFrame implements MouseMotionListener{
         jfrm.setSize(800, 800);
         // Terminate the program when the user closes the application.
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JLabel l1= new JLabel("Drag the red ball through the path");
+        l1= new JLabel("Drag the red ball through the path");
         l1.setBounds(200,80,200,50);
+        jfrm.add(l1);
         jfrm.add(pp);
         jfrm.addMouseMotionListener(this);
         // Display the frame.
@@ -162,7 +163,7 @@ public class Main extends JFrame implements MouseMotionListener{
            isstarted = false;
            AudioInputStream audioIn = null;
            try {
-               File file = new File("src/com/OOP/game/Passed.wav");
+               File file = new File("https://github.com/MaDGaMeR142/Java-assignment/blob/e5b1646f9e5cc1903f507b0054568abf0883a7d1/src/com/OOP/game/Passed.wav");
                AudioInputStream stream = AudioSystem.getAudioInputStream(file);
                Clip clip = AudioSystem.getClip();
                clip.open(stream);
@@ -203,7 +204,7 @@ public class Main extends JFrame implements MouseMotionListener{
     void gameover(){
         AudioInputStream audioIn = null;
         try {
-            File file = new File("src/com/OOP/game/wasted.wav");
+            File file = new File("https://github.com/MaDGaMeR142/Java-assignment/blob/e5b1646f9e5cc1903f507b0054568abf0883a7d1/src/com/OOP/game/wasted.wav");
             AudioInputStream stream = AudioSystem.getAudioInputStream(file);
             Clip clip = AudioSystem.getClip();
             clip.open(stream);
